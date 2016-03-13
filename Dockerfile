@@ -4,7 +4,7 @@ MAINTAINER Tobias Suckow <tobias@suckow.biz>
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DEBCONF_NONINTERACTIVE_SEEN=true \
-    KEY_SERVER=hkp://keyserver.ubuntu.com:80
+    KEY_SERVER=hkp://p80.pool.sks-keyservers.net:80
 
 RUN apt-get update --quiet && apt-get install --quiet --yes --no-install-recommends \
     wget \
