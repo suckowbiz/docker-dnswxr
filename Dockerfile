@@ -18,7 +18,7 @@ RUN apt-get update --quiet \
 WORKDIR /opt
 RUN curl -fLOOSs https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.{jar,jar.asc} \
  && gpg --keyserver $KEY_SERVER --recv-keys 3D2EDA0D \
- && gpg --verify dnswxr.jar.asc dnswxr.jar
+ && gpg --verify dnswxr-swarm.jar.asc dnswxr-swarm.jar
 
 EXPOSE 8080
 CMD ["java","-jar","/opt/dnswxr-swarm.jar"]
