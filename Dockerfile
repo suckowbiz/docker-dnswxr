@@ -10,18 +10,15 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update --quiet \
  && apt-get upgrade --yes \
  && apt-get install --quiet --yes --no-install-recommends \
-    wget \
+    curl \
  && apt-get clean --quiet \
  && apt-get autoremove --quiet \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN wget https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.tar.gz -O dnswxr.tar.gz --no-check-certificate --no-verbose \
- && wget https://github.com/suckowbiz/dnswxr/releases/download/v{VERSION_DNSWXR}/dnswxr-swarm.tar.gz.asc -O dnswxr.tar.gz.asc --no-check-certificate --no-verbose \
+RUN curl -fLOOSs https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.{jar,jar.asc} \
  && gpg --keyserver $KEY_SERVER --recv-keys 3D2EDA0D \
- && gpg --verify dnswxr.tar.gz.asc dnswxr.tar.gz \
- && tar -xf dnswxr.tar.gz \
- && rm -rf dnswxr.tar.gz 
+ && gpg --verify dnswxr.jar.asc dnswxr.jar
 
 EXPOSE 8080
 CMD ["java","-jar","/opt/dnswxr-swarm.jar"]
