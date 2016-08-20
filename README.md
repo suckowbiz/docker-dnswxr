@@ -1,4 +1,4 @@
-![image](https://img.shields.io/imagelayers/layers/suckowbiz/dnswxr/latest.svg) ![image](https://img.shields.io/imagelayers/image-size/suckowbiz/dnswxr/latest.svg) ![image](https://img.shields.io/docker/pulls/suckowbiz/dnswxr.svg) ![image](https://img.shields.io/github/license/suckowbiz/docker-dnswxr.svg)
+ ![image](https://img.shields.io/docker/pulls/suckowbiz/dnswxr.svg) ![image](https://img.shields.io/github/license/suckowbiz/docker-dnswxr.svg)
 
 # What is it?
 A [Dockerfile](http://docs.docker.com/engine/reference/builder/) to serve a REST API to update DNS records at [InterNetworX (inwx)](https://www.inwx.de).
