@@ -21,4 +21,4 @@ RUN curl -fLOOSs https://github.com/suckowbiz/dnswxr/releases/download/v${VERSIO
  && gpg --verify dnswxr-swarm.jar.asc dnswxr-swarm.jar
 
 EXPOSE 8080
-CMD ["java","-jar","/opt/dnswxr-swarm.jar"]
+CMD ["java","-jar","-Djava.net.preferIPv4Stack=true","-Djava.net.preferIPv4Addresses=true","/opt/dnswxr-swarm.jar"]
