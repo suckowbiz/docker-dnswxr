@@ -15,7 +15,7 @@ RUN curl \
         --locaton \
         --remote-name \
         --remote-name \
-        https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.jar{,jar.md5} \
+        https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.jar{,.md5} \
  && md5sum --check dnswxr-swarm.jar.md5 || exit
 
 EXPOSE 8080
