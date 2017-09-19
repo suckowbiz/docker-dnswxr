@@ -12,7 +12,7 @@ RUN apt-get install --quiet --yes --no-install-recommends \
 WORKDIR /opt
 RUN curl \
         --fail \
-        --locaton \
+        --location \
         --remote-name \
         --remote-name \
         https://github.com/suckowbiz/dnswxr/releases/download/v${VERSION_DNSWXR}/dnswxr-swarm.jar{,.md5} \
