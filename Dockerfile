@@ -1,6 +1,7 @@
 ## These instructions serve the purpose to run dsnwxer app.
-FROM java:openjdk-8-jdk
-MAINTAINER Tobias Suckow <tobias@suckow.biz>
+FROM openjdk:8-jdk
+
+LABEL maintainer "Tobias Suckow <tobias@suckow.biz>"
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DEBCONF_NONINTERACTIVE_SEEN=true \
